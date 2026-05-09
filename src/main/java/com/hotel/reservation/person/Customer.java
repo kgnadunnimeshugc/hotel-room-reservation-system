@@ -9,13 +9,11 @@ public class Customer extends Person{
     private int loyaltyPoints = 0;
 
     public Customer() {
-
         super();
     }
 
     @Override
     public String getRole() {
-
         return "CUSTOMER";
     }
 
