@@ -21,7 +21,6 @@ public class Customer extends Person{
 
     // Customer-specific behavior
     public void addLoyaltyPoints(int points) {
-
         this.loyaltyPoints += points;
     }
 
