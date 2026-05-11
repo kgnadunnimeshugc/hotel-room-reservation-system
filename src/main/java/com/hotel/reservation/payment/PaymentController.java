@@ -27,8 +27,6 @@ public class PaymentController {
         if (customer == null) return "redirect:/login";
 
         Reservation reservation = reservationService.getById(reservationId);
-
-        // Customer can only pay for their own bookings
         if (!reservation.getCustomer().getId().equals(customer.getId())) {
             return "redirect:/profile";
         }
@@ -82,7 +80,6 @@ public class PaymentController {
 
         Payment payment = paymentService.getById(id);
 
-        // Security: customer can only see their own receipts
         if (!payment.getReservation().getCustomer().getId().equals(customer.getId())) {
             return "redirect:/profile";
         }
