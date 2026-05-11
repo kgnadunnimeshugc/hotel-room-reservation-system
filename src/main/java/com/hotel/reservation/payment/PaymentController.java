@@ -70,7 +70,7 @@ public class PaymentController {
         } catch (Exception e) {
             redirectAttrs.addFlashAttribute("errorMessage", e.getMessage());
             return "redirect:/payment/checkout/" + reservationId;
-        }
+        } 
     }
 
     @GetMapping("/receipt/{id}")
