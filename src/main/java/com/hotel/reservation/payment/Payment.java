@@ -36,10 +36,10 @@ public abstract class Payment {
         this.transactionId = "TXN" + System.currentTimeMillis();
     }
 
-    // Abstract — each subclass implements its own payment logic
+    // Abstract method each subclass implements its own payment logic
     public abstract boolean processPayment();
 
-    // Concrete — shared by all subclasses
+    // Concrete method shared by all subclasses
     public String generateReceipt() {
         return String.format(
                 "Receipt #%s | Amount: Rs. %.2f | Date: %s | Status: %s",
